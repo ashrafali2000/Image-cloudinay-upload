@@ -12,7 +12,7 @@ const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
       folder: 'my-app-folder',
-    //   format: async (req, file) => ['png', 'jpg', 'jpeg'], // The problem was this format key it returns promise
+      // format: async (req, file) => ['png', 'jpg', 'jpeg'], // The problem was this format key it returns promise
       allowedFormat: ['jpg', 'png', 'jpeg']  // correct key is allowed format
     },
   });

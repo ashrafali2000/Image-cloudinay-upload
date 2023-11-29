@@ -14,10 +14,12 @@ router.get("/", async (req, res) => {
 router.post("/", upload.single('image'), async (req, res) => {
     const { title } = req.body;
     console.log(req.file);
+    const image = req.file.path;
     const addProduct = new Product({
         title: title,
         price: 20,
-        category: 'fruit'
+        category: 'fruit',
+        images: image
     })
     const result = await addProduct.save();
     res.redirect("/products");

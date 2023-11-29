@@ -18,6 +18,9 @@ const shopSchema = new Schema({
     category: {
         type: String,
         enum: ['vegetable', 'fruit', 'dairy'],
+    },
+    images: {
+        type: String,
     }
 }); 
 

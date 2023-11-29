@@ -12,6 +12,7 @@
       <% for(let p of products) {%>
       <li><%= p.title%></li>
       <a href="/products/update/<%=p.id %>">edit</a>
+      <img src= "<%= p.images %>"/>
       <% }%>
     </ul>
   </body>
